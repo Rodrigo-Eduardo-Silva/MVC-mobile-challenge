@@ -29,7 +29,7 @@ class RepositoriesListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepareRepositoryCell(with repository: RepositoriesListModel.GitRepositories){
+    func prepareRepositoryCell(with repository: GitRepository){
         repositoryNameLabel.text = repository.name
         descriptionRepositoryLabel.text = repository.description
         forksLabel.text = String(repository.forks)
@@ -37,7 +37,7 @@ class RepositoriesListTableViewCell: UITableViewCell {
         userNameLabel.text = repository.full_name
         if let url = URL(string: repository.owner.avatar_url){
             avatarImage.kf.setImage(with: url, placeholder: nil, options: nil, completionHandler: nil)
-        }         
+        }
     }
 
 }
