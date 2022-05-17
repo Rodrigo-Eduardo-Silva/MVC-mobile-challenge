@@ -13,11 +13,15 @@ protocol RepositoriesListModelDelegate : AnyObject{
 
 class RepositoriesListModel {
     var repositories: [GitRepository] = []
-    var service: RepositoriesListService!
     weak var delegate : RepositoriesListModelDelegate?
+    let service: RepositoriesListService
+
+    init(service: RepositoriesListService = RepositoriesListService()) {
+        self.service = service
+    }
 
     func loadRepositories(){
-        RepositoriesListService.LoadRepositories { [weak self] repository in
+        RepositoriesListService().loadRepositories { [weak self] repository in
            if let repository = repository {
                 self?.repositories += repository.items
           }

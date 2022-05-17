@@ -10,19 +10,21 @@ import Foundation
 
 class RepositoriesListService {
     
-    static private let basePath = "https://api.github.com/search/repositories?"
-    static private let privateToken = "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"
-    static private let teste = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1"
-    static private let per_page = 50
-    private static let configuration: URLSessionConfiguration = {
+    private let basePath = "https://api.github.com/search/repositories?"
+    private let privateToken = "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"
+    private let teste = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1"
+    private let per_page = 50
+
+    private let session: URLSession
+
+    init() {
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = ["Authorization": "\(privateToken)","Accept": "application/json"]
         config.timeoutIntervalForRequest = 30.0
-        return config
-    }()
-    private static let session = URLSession(configuration: configuration)
+        session = URLSession(configuration: config)
+    }
         
-    class func LoadRepositories(completion: @escaping (GitHead?) -> Void){
+    func loadRepositories(completion: @escaping (GitHead?) -> Void){
         guard let url = URL(string: teste) else {return}
         let dataTask = session.dataTask(with: url) { data, response, error in
             if error == nil{

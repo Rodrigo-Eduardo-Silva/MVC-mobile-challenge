@@ -117,6 +117,7 @@
 		33324E112829F19300C35FD0 /* MVC-mobile-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				911C4EC928333EF6005A3311 /* Networking */,
 				911C4EC228333C9F005A3311 /* Models */,
 				33324E122829F19300C35FD0 /* AppDelegate.swift */,
 				33324E142829F19300C35FD0 /* SceneDelegate.swift */,
@@ -151,7 +152,6 @@
 				33324E1D2829F19400C35FD0 /* LaunchScreen.storyboard */,
 				33324E182829F19300C35FD0 /* Main.storyboard */,
 				33324E422829F61000C35FD0 /* RepositoriesListModel.swift */,
-				33324E452829F74600C35FD0 /* RespositoriesListService.swift */,
 				33324E47282A087700C35FD0 /* RepositoriesListTableViewController.swift */,
 				338A71EC282B57CE008BAA23 /* RepositoriesListTableViewCell.swift */,
 			);
@@ -166,6 +166,22 @@
 				911C4EC728333D4A005A3311 /* Owner.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		911C4EC928333EF6005A3311 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				911C4ECA28333F01005A3311 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		911C4ECA28333F01005A3311 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				33324E452829F74600C35FD0 /* RespositoriesListService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
