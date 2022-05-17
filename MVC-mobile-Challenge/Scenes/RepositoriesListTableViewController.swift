@@ -11,7 +11,7 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     var model = RepositoriesListModel()
-    var repository: [RepositoriesListModel.GitRepositories] = []
+    var repository: [GitRepository] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()

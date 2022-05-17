@@ -29,7 +29,7 @@ class RepositoriesListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepareRepositoryCell(with repository: RepositoriesListModel.GitRepositories){
+    func prepareRepositoryCell(with repository: GitRepository){
         repositoryNameLabel.text = repository.name
         descriptionRepositoryLabel.text = repository.description
         forksLabel.text = String(repository.forks)

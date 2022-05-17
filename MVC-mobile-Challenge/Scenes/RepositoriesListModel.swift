@@ -12,33 +12,10 @@ protocol RepositoriesListModelDelegate : AnyObject{
 }
 
 class RepositoriesListModel {
-    var repositories: [GitRepositories] = []
+    var repositories: [GitRepository] = []
     var service: RepositoriesListService!
     weak var delegate : RepositoriesListModelDelegate?
-    
 
-    struct GitHead : Codable {
-        let total_count : Int
-        let items : [GitRepositories]
-    }
-
-    struct GitRepositories : Codable{
-        let id : Int
-        let name: String
-        let full_name: String
-        let stargazers_count : Int
-        let forks: Int
-        let description: String?
-        let owner : Owner
-    }
-
-    struct Owner : Codable{
-        let login : String
-        let id : Int
-        let avatar_url : String
-        let repos_url : String
-    }
-    
     func loadRepositories(){
         RepositoriesListService.LoadRepositories { [weak self] repository in
            if let repository = repository {

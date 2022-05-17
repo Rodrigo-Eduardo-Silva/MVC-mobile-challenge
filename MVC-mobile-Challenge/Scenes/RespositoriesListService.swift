@@ -21,9 +21,8 @@ class RepositoriesListService {
         return config
     }()
     private static let session = URLSession(configuration: configuration)
-    typealias gitHead = RepositoriesListModel.GitHead
         
-    class func LoadRepositories(completion: @escaping (gitHead?) -> Void){
+    class func LoadRepositories(completion: @escaping (GitHead?) -> Void){
         guard let url = URL(string: teste) else {return}
         let dataTask = session.dataTask(with: url) { data, response, error in
             if error == nil{
@@ -31,7 +30,7 @@ class RepositoriesListService {
                 if response.statusCode == 200{
                     guard let data = data else {return}
                     do {
-                        let repositories = try JSONDecoder().decode(gitHead.self, from: data)
+                        let repositories = try JSONDecoder().decode(GitHead.self, from: data)
                         completion(repositories)
                     }catch{
                         print(error.localizedDescription)
