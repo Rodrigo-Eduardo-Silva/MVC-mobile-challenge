@@ -12,6 +12,7 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var model = RepositoriesListModel()
     var repository: [GitRepository] = []
+    var totalrepositories: GitHead!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
         cell.prepareRepositoryCell(with: cellRepository)
         return cell
     }
+    // MARK: - Table view delegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
@@ -49,6 +51,13 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == repository.count - 20 && !model.rechargeList && repository.count != model.totalrepository{
+            model.currentPage += 1
+            model.loadRepositories()
+            print("Total de Repositórios: \(model.totalrepository) , Já Inclusos : \(repository.count)")
+        }
+    }
 }
 
 extension RepositoriesListTableViewController: RepositoriesListModelDelegate {
@@ -56,6 +65,7 @@ extension RepositoriesListTableViewController: RepositoriesListModelDelegate {
         repository += model.repositories
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
+            self?.model.rechargeList = false
          }
     }
 }

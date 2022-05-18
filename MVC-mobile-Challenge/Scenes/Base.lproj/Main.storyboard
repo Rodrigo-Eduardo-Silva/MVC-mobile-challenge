@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DgS-XX-6GX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DgS-XX-6GX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="159" id="cFa-Za-xYU" customClass="RepositoriesListTableViewCell" customModule="MVC_mobile_Challenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" focusStyle="custom" rowHeight="159" id="cFa-Za-xYU" customClass="RepositoriesListTableViewCell" customModule="MVC_mobile_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cFa-Za-xYU" id="Ukx-xZ-SU9">
@@ -48,7 +48,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVX-nF-B7X">
                                                             <rect key="frame" x="0.0" y="0.0" width="238" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -86,9 +86,10 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="dVX-nF-B7X" firstAttribute="top" secondItem="UaJ-vj-a0q" secondAttribute="top" id="3AT-mI-r6R"/>
                                                         <constraint firstItem="C9u-Vd-yiv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EOr-0K-U0z" secondAttribute="bottom" constant="8" id="ErA-p6-jVC"/>
@@ -119,7 +120,7 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="91H-MB-WH8" secondAttribute="trailing" id="3Tx-fB-2Sg"/>
                                                         <constraint firstItem="suv-8l-kPA" firstAttribute="top" secondItem="91H-MB-WH8" secondAttribute="bottom" constant="8" id="4GB-kh-xvI"/>

@@ -21,8 +21,6 @@
 		33324E462829F74600C35FD0 /* RespositoriesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33324E452829F74600C35FD0 /* RespositoriesListService.swift */; };
 		33324E48282A087700C35FD0 /* RepositoriesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33324E47282A087700C35FD0 /* RepositoriesListTableViewController.swift */; };
 		338A71ED282B57CE008BAA23 /* RepositoriesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338A71EC282B57CE008BAA23 /* RepositoriesListTableViewCell.swift */; };
-		338A71EE282B57CE008BAA23 /* RepositoriesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338A71EC282B57CE008BAA23 /* RepositoriesListTableViewCell.swift */; };
-		338A71EF282B57CE008BAA23 /* RepositoriesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338A71EC282B57CE008BAA23 /* RepositoriesListTableViewCell.swift */; };
 		911C4EC428333CBF005A3311 /* GitHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C4EC328333CBF005A3311 /* GitHead.swift */; };
 		911C4EC628333CDE005A3311 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C4EC528333CDE005A3311 /* GitRepository.swift */; };
 		911C4EC828333D4A005A3311 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C4EC728333D4A005A3311 /* Owner.swift */; };
@@ -151,11 +149,19 @@
 			children = (
 				33324E1D2829F19400C35FD0 /* LaunchScreen.storyboard */,
 				33324E182829F19300C35FD0 /* Main.storyboard */,
-				33324E422829F61000C35FD0 /* RepositoriesListModel.swift */,
-				33324E47282A087700C35FD0 /* RepositoriesListTableViewController.swift */,
-				338A71EC282B57CE008BAA23 /* RepositoriesListTableViewCell.swift */,
+				33BAB47E283470B8001E0E24 /* Repositories */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		33BAB47E283470B8001E0E24 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				338A71EC282B57CE008BAA23 /* RepositoriesListTableViewCell.swift */,
+				33324E47282A087700C35FD0 /* RepositoriesListTableViewController.swift */,
+				33324E422829F61000C35FD0 /* RepositoriesListModel.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		911C4EC228333C9F005A3311 /* Models */ = {
@@ -339,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				33324E2A2829F19500C35FD0 /* MVC_mobile_ChallengeTests.swift in Sources */,
-				338A71EE282B57CE008BAA23 /* RepositoriesListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +353,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				33324E342829F19500C35FD0 /* MVC_mobile_ChallengeUITests.swift in Sources */,
-				338A71EF282B57CE008BAA23 /* RepositoriesListTableViewCell.swift in Sources */,
 				33324E362829F19500C35FD0 /* MVC_mobile_ChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

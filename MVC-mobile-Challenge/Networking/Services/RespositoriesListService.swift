@@ -20,12 +20,13 @@ class RepositoriesListService {
     init() {
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = ["Authorization": "\(privateToken)","Accept": "application/json"]
-        config.timeoutIntervalForRequest = 30.0
+        config.timeoutIntervalForRequest = 5
         session = URLSession(configuration: config)
     }
         
-    func loadRepositories(completion: @escaping (GitHead?) -> Void){
-        guard let url = URL(string: teste) else {return}
+    func loadRepositories(page: Int ,completion: @escaping (GitHead?) -> Void){
+        let query = basePath + "q=language:Java&sort=stars&page=\(page)"
+        guard let url = URL(string: query) else {return}
         let dataTask = session.dataTask(with: url) { data, response, error in
             if error == nil{
                 guard let response = response as? HTTPURLResponse else {return}

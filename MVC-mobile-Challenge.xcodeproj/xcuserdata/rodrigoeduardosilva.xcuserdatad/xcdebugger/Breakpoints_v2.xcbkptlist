@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
+            landmarkName = "RepositoriesListTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,9 +30,9 @@
             filePath = "MVC-mobile-Challenge/Scenes/RepositoriesListTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "updateRepositoriesModel()"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tableView(_:estimatedHeightForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,7 +80,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
