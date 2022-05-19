@@ -25,7 +25,7 @@ class RepositoriesListService {
     }
         
     func loadRepositories(page: Int ,completion: @escaping (GitHead?) -> Void){
-        let query = basePath + "q=language:Java&sort=stars&page=\(page)"
+        let query = basePath + "q=language:Java&sort=stars&page=\(page)&per_page=\(per_page)"
         guard let url = URL(string: query) else {return}
         let dataTask = session.dataTask(with: url) { data, response, error in
             if error == nil{
