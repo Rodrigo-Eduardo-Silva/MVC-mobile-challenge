@@ -1,10 +1,3 @@
-//
-//  RepositoriesListTableViewCell.swift
-//  MVC-mobile-Challenge
-//
-//  Created by Rodrigo Eduardo Silva on 10/05/22.
-//
-
 import UIKit
 import Kingfisher
 

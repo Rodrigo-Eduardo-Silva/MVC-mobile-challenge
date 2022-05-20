@@ -1,10 +1,3 @@
-//
-//  RepositoriesListModel.swift
-//  MVC-mobile-Challenge
-//
-//  Created by Rodrigo Eduardo Silva on 09/05/22.
-//
-
 import Foundation
 import SwiftUI
 
