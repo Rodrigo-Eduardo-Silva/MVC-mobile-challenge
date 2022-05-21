@@ -31,7 +31,8 @@ class PullRequestListService {
                         print("Json error")
                     }
                 } else {
-                    print("Problema no servidor")
+                    print("Problema no servidor Pull")
+                    print(query)
                 }
             } else {
                 print(error as Any)

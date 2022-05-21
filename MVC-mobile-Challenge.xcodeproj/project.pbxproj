@@ -13,6 +13,7 @@
 		33171AD02835D86B009F4CAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33171ACF2835D86B009F4CAE /* User.swift */; };
 		33171AD22835D930009F4CAE /* PullRequestListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33171AD12835D930009F4CAE /* PullRequestListService.swift */; };
 		33171AD42835E2D6009F4CAE /* PullRequestListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33171AD32835E2D6009F4CAE /* PullRequestListModel.swift */; };
+		333092862838768200C27E2A /* PullRequestListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333092852838768200C27E2A /* PullRequestListTableViewCell.swift */; };
 		33324E132829F19300C35FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33324E122829F19300C35FD0 /* AppDelegate.swift */; };
 		33324E152829F19300C35FD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33324E142829F19300C35FD0 /* SceneDelegate.swift */; };
 		33324E172829F19300C35FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33324E162829F19300C35FD0 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		33171ACF2835D86B009F4CAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		33171AD12835D930009F4CAE /* PullRequestListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListService.swift; sourceTree = "<group>"; };
 		33171AD32835E2D6009F4CAE /* PullRequestListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListModel.swift; sourceTree = "<group>"; };
+		333092852838768200C27E2A /* PullRequestListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListTableViewCell.swift; sourceTree = "<group>"; };
 		33324E0F2829F19300C35FD0 /* MVC-mobile-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVC-mobile-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33324E122829F19300C35FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33324E142829F19300C35FD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				33171ACB2835D431009F4CAE /* PullRequestListViewController.swift */,
 				33171AD32835E2D6009F4CAE /* PullRequestListModel.swift */,
+				333092852838768200C27E2A /* PullRequestListTableViewCell.swift */,
 			);
 			path = PullRequest;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				33324E132829F19300C35FD0 /* AppDelegate.swift in Sources */,
 				33171ACC2835D431009F4CAE /* PullRequestListViewController.swift in Sources */,
 				33171ACE2835D7D7009F4CAE /* PullRequest.swift in Sources */,
+				333092862838768200C27E2A /* PullRequestListTableViewCell.swift in Sources */,
 				33324E462829F74600C35FD0 /* RespositoriesListService.swift in Sources */,
 				33324E48282A087700C35FD0 /* RepositoriesListTableViewController.swift in Sources */,
 				33324E152829F19300C35FD0 /* SceneDelegate.swift in Sources */,
