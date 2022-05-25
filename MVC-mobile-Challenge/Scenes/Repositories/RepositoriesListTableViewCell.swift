@@ -32,5 +32,4 @@ class RepositoriesListTableViewCell: UITableViewCell {
             avatarImage.kf.setImage(with: url, placeholder: nil, options: nil, completionHandler: nil)
         }
     }
-
 }

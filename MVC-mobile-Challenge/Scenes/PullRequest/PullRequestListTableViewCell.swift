@@ -19,10 +19,13 @@ class PullRequestListTableViewCell: UITableViewCell {
     
     func preparePullrequest(with pullrequest: PullRequest){
         titleLabel.text = pullrequest.title
-        bodyLabel.text = pullrequest.user.body
+        if let bodyPullrequest = pullrequest.user.body{
+            bodyLabel.text = bodyPullrequest
+        }else{
+            bodyLabel.text = " Just a PullRequest Body"
+        }
         if let url = URL(string: pullrequest.user.avatar_url){
             avatarPullimage.kf.setImage(with: url, placeholder: nil, options: nil, completionHandler: nil)
         }
     }
-
 }

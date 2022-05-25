@@ -1,19 +1,20 @@
 import UIKit
 
 class PullRequestListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    
+
     @IBOutlet weak var tableview: UITableView!
-    var pullmodel = PullRequestListModel()
     var pullrequest: [PullRequest] = []
-       
+    var pullmodel = PullRequestListModel()
+    var linkpullrequest: GitRepository!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableview.dataSource = self
         tableview.delegate = self
-        pullmodel.loadPullRequest()
-
-        // Do any additional setup after loading the view.
+        pullmodel.delegate = self
+        pullmodel.loadPullRequest(owner: linkpullrequest.owner.login, repository: linkpullrequest.name)
+        navigationItem.title = "Repository " + linkpullrequest.name
     }
   
     // MARK: -  Table view data source

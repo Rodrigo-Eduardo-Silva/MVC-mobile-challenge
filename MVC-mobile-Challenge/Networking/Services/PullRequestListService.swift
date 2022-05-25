@@ -15,8 +15,9 @@ class PullRequestListService {
         session = URLSession(configuration: config)
     }
         
-    func loadPullRequest(page: Int , owner: String ,repository: String ,completion: @escaping ([PullRequest]?) -> Void){
+    func loadPullRequest(page: Int ,owner: String ,repository: String ,completion: @escaping ([PullRequest]?) -> Void){
         let query = "https://api.github.com/repos/\(owner)/\(repository)/pulls?page=\(page)&per_page=\(per_page)"
+        print(query)
         guard let url = URL(string: query) else {return}
         let dataTask = session.dataTask(with: url) { data, response, error in
             if error == nil{
@@ -26,7 +27,7 @@ class PullRequestListService {
                     do {
                         let pullrequest = try JSONDecoder().decode([PullRequest].self, from: data)
                         completion(pullrequest)
-                    }catch{
+                     }catch{
                         print(error.localizedDescription)
                         print("Json error")
                     }
@@ -40,5 +41,4 @@ class PullRequestListService {
         }
         dataTask.resume()
     }
-
 }

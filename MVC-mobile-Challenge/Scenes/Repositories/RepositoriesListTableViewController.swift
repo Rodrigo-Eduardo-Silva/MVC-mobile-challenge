@@ -14,6 +14,13 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
         model.delegate = self
         model.loadRepositories()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PullRequestListViewController
+        let pull = repository[tableView.indexPathForSelectedRow!.row]
+        vc.linkpullrequest = pull
+        
+    }
   
     // MARK: - Table view data source
 
@@ -44,8 +51,9 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == repository.count - 20 && !model.rechargeList && repository.count != model.totalrepository{
+        if indexPath.row == repository.count - 20 && !model.rechargeList && repository.count != model.totalrepository {
             model.currentPage += 1
             model.loadRepositories()
             print("Total de Repositórios: \(model.totalrepository) , Já Inclusos : \(repository.count)")

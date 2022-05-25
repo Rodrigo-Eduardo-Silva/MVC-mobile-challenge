@@ -11,22 +11,21 @@ class PullRequestListModel {
     var currentPage: Int
     var totalpullrequest: Int
     var rechargeList: Bool
-    let pullOwner: GitRepository
     init(service: PullRequestListService = PullRequestListService()){
         self.service = service
         self.currentPage = 1
         totalpullrequest = 1
         rechargeList = false
-    }
+      }
     
-    func loadPullRequest(){
+    func loadPullRequest(owner: String ,repository: String){
         rechargeList = true
-        PullRequestListService().loadPullRequest(page: currentPage, owner: pullOwner.owner.login, repository: pullOwner.name) { pull in
-            if let pull = pull {
-                self.pullrequest += pull
-                self.totalpullrequest = pull.count
+            PullRequestListService().loadPullRequest(page: currentPage, owner: owner, repository: repository) { pull in
+                if let pull = pull {
+                    self.pullrequest += pull
+                    self.totalpullrequest = pull.count
+                }
+                self.delegate?.updatePullRequest()
             }
-            self.delegate?.updatePullRequest()
-        }
     }
 }

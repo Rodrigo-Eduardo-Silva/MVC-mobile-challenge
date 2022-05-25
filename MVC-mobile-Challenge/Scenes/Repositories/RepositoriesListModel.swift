@@ -27,10 +27,8 @@ class RepositoriesListModel {
                 self?.totalrepository = repository.total_count
            }
              self?.delegate?.updateRepositoriesModel()
-       }
+        }
     }
-    
-    
 }
 
 
