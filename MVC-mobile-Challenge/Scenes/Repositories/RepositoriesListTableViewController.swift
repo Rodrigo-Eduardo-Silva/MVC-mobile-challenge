@@ -6,9 +6,16 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     var model = RepositoriesListModel()
     var repository: [GitRepository] = []
     var totalrepositories: GitHead!
+    var label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .blue
+        return label
+    }()
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = "Carregando Repositórios.Aguarde..."
         tableView.dataSource = self
         tableView.delegate = self
         model.delegate = self
@@ -19,9 +26,7 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
         let vc = segue.destination as! PullRequestListViewController
         let pull = repository[tableView.indexPathForSelectedRow!.row]
         vc.linkpullrequest = pull
-        
     }
-  
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,7 +35,7 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        tableView.backgroundView = repository.count == 0 ? label : nil
         return repository.count
     }
 
