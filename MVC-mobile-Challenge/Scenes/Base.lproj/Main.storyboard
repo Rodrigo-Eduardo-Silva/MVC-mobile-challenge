@@ -165,6 +165,10 @@
                             <constraint firstItem="XZr-SF-SDd" firstAttribute="leading" secondItem="dH8-yo-xhg" secondAttribute="leading" id="GU8-QL-5AF"/>
                             <constraint firstItem="dH8-yo-xhg" firstAttribute="trailing" secondItem="XZr-SF-SDd" secondAttribute="trailing" id="Lup-yt-f1n"/>
                             <constraint firstItem="XZr-SF-SDd" firstAttribute="top" secondItem="dH8-yo-xhg" secondAttribute="top" id="cag-3n-aVO"/>
+                            <constraint firstItem="XZr-SF-SDd" firstAttribute="trailing" secondItem="dH8-yo-xhg" secondAttribute="trailing" id="evu-ie-iuo"/>
+                            <constraint firstItem="XZr-SF-SDd" firstAttribute="leading" secondItem="dH8-yo-xhg" secondAttribute="leading" id="fuW-Py-zm5"/>
+                            <constraint firstItem="XZr-SF-SDd" firstAttribute="bottom" secondItem="dH8-yo-xhg" secondAttribute="bottom" id="gMH-gL-taj"/>
+                            <constraint firstItem="XZr-SF-SDd" firstAttribute="top" secondItem="dH8-yo-xhg" secondAttribute="top" id="tmM-XH-Zqa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jqh-Yk-xZs"/>
@@ -184,9 +188,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="58D-cT-kMP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="58D-cT-kMP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Pullcell" rowHeight="149" id="M14-7x-Pmg" customClass="PullRequestListTableViewCell" customModule="MVC_mobile_Challenge" customModuleProvider="target">
@@ -250,6 +253,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Se5-Wi-OIQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="58D-cT-kMP" firstAttribute="trailing" secondItem="Se5-Wi-OIQ" secondAttribute="trailing" id="CRq-Iz-yOr"/>
+                            <constraint firstAttribute="bottom" secondItem="58D-cT-kMP" secondAttribute="bottom" id="ZGR-BP-XlR"/>
+                            <constraint firstItem="58D-cT-kMP" firstAttribute="leading" secondItem="Se5-Wi-OIQ" secondAttribute="leading" id="lkr-Jq-7U2"/>
+                            <constraint firstItem="58D-cT-kMP" firstAttribute="top" secondItem="v5L-Sb-OsG" secondAttribute="top" id="oKa-oN-Ezm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iuL-A1-p1d"/>
                     <connections>
@@ -276,9 +285,8 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9zA-AR-Kzd">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9zA-AR-Kzd">
                                 <rect key="frame" x="197" y="482" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" name="AccentColor"/>
                             </activityIndicatorView>
                         </subviews>
@@ -286,6 +294,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eRR-QH-K8v" firstAttribute="trailing" secondItem="Z8u-Cc-vPh" secondAttribute="trailing" id="8HZ-wO-JIf"/>
+                            <constraint firstItem="9zA-AR-Kzd" firstAttribute="centerX" secondItem="eRR-QH-K8v" secondAttribute="centerX" id="R94-m3-Eru"/>
+                            <constraint firstItem="9zA-AR-Kzd" firstAttribute="centerY" secondItem="eRR-QH-K8v" secondAttribute="centerY" id="aBU-zD-69S"/>
                             <constraint firstItem="eRR-QH-K8v" firstAttribute="top" secondItem="Z8u-Cc-vPh" secondAttribute="top" id="bva-iR-0zI"/>
                             <constraint firstAttribute="bottom" secondItem="eRR-QH-K8v" secondAttribute="bottom" id="wPc-Q0-goH"/>
                             <constraint firstItem="eRR-QH-K8v" firstAttribute="leading" secondItem="Z8u-Cc-vPh" secondAttribute="leading" id="wdE-46-lmi"/>
