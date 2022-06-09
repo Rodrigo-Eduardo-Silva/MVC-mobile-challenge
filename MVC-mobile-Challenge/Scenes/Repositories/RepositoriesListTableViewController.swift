@@ -25,6 +25,7 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! PullRequestListViewController
         let pull = repository[tableView.indexPathForSelectedRow!.row]
+        vc.pullmodel = PullRequestListModelMock(service: PullRequestListService())
         vc.linkpullrequest = pull
     }
     // MARK: - Table view data source

@@ -12,6 +12,7 @@ class RepositoriesListModel {
     var currentPage: Int
     var totalrepository: Int
     var rechargeList: Bool
+    
     init(service: RepositoriesListService = RepositoriesListService()) {
         self.service = service
         self.currentPage = 1

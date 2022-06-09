@@ -11,6 +11,7 @@ class PullRequestListViewControllerWeb: UIViewController {
         guard let url = URL(string: pullrequestWeb.user.html_url) else {
             fatalError()
         }
+        
         let request = URLRequest(url: url)
         PullRequestWebView.load(request)
         PullRequestWebView.allowsBackForwardNavigationGestures = true
