@@ -22,11 +22,22 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
         model.loadRepositories()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! PullRequestListViewController
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! PullRequestListViewController
+//        let pull = repository[tableView.indexPathForSelectedRow!.row]
+//        vc.pullmodel = PullRequestListModelMock(service: PullRequestListService())
+//        vc.linkpullrequest = pull
+//    }
+    
+    func showPullrequest() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewcontroller = storyboard.instantiateViewController(withIdentifier: "PullRequestListViewController") as? PullRequestListViewController else {
+            fatalError()
+        }
         let pull = repository[tableView.indexPathForSelectedRow!.row]
-        vc.pullmodel = PullRequestListModelMock(service: PullRequestListService())
-        vc.linkpullrequest = pull
+        viewcontroller.pullmodel = PullRequestListModel(service: PullRequestListService())
+        viewcontroller.linkpullrequest = pull
+        navigationController?.pushViewController(viewcontroller, animated: true)
     }
     // MARK: - Table view data source
 
@@ -64,6 +75,9 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
             model.loadRepositories()
             print("Total de Repositórios: \(model.totalrepository) , Já Inclusos : \(repository.count)")
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showPullrequest()
     }
 }
 

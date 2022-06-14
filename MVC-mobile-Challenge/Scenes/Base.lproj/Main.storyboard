@@ -28,7 +28,7 @@
         <!--Repositories List Table View Controller-->
         <scene sceneID="QOL-DY-Dmc">
             <objects>
-                <viewController id="xHf-Ma-ZFQ" customClass="RepositoriesListTableViewController" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepositoriesListTableViewController" id="xHf-Ma-ZFQ" customClass="RepositoriesListTableViewController" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gTH-RL-gMc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,6 @@
                                             <outlet property="repositoryNameLabel" destination="dVX-nF-B7X" id="zSz-tv-mHt"/>
                                             <outlet property="starsLabel" destination="i1f-FB-Z7V" id="Xkn-ef-jDR"/>
                                             <outlet property="userNameLabel" destination="suv-8l-kPA" id="yuk-e3-6TD"/>
-                                            <segue destination="pMW-pr-VYh" kind="show" identifier="toPullrequestSegue" id="NCc-xd-yXX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -183,7 +182,7 @@
         <!--Pull Request List View Controller-->
         <scene sceneID="jrt-76-GSp">
             <objects>
-                <viewController id="pMW-pr-VYh" customClass="PullRequestListViewController" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PullRequestListViewController" id="pMW-pr-VYh" customClass="PullRequestListViewController" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v5L-Sb-OsG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,13 +271,13 @@
         <!--Pull Request List View Controller Web-->
         <scene sceneID="6hf-0i-F8I">
             <objects>
-                <viewController id="w68-eN-ZhY" customClass="PullRequestListViewControllerWeb" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PullRequestListViewControllerWeb" id="w68-eN-ZhY" customClass="PullRequestListViewControllerWeb" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="169-zj-tia">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRR-QH-K8v">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>

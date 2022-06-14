@@ -20,7 +20,7 @@ class PullRequestListViewController: UIViewController, UITableViewDataSource, UI
         tableview.delegate = self
         pullmodel?.delegate = self
         pullmodel?.loadPullRequest(owner: linkpullrequest.owner.login, repository: linkpullrequest.name)
-        navigationItem.title = "Repository " + linkpullrequest.name
+       // navigationItem.title = "Repository " + linkpullrequest.name
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! PullRequestListViewControllerWeb

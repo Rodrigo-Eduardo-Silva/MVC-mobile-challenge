@@ -100,5 +100,161 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "PullRequestListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3 - e1f0ff91919c27c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_mobile_Challenge.PullRequestListViewController.linkpullrequest.getter : Swift.Optional&lt;MVC_mobile_Challenge.GitRepository&gt;"
+                  moduleName = "MVC-mobile-Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigoeduardosilva/Swift_Dev/MVC-mobile-Challenge/MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3 - 3a0763ea3bf223d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_mobile_Challenge.PullRequestListViewController.linkpullrequest.setter : Swift.Optional&lt;MVC_mobile_Challenge.GitRepository&gt;"
+                  moduleName = "MVC-mobile-Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigoeduardosilva/Swift_Dev/MVC-mobile-Challenge/MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3 - df6429f114c257cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_mobile_Challenge.PullRequestListViewController.linkpullrequest.modify : Swift.Optional&lt;MVC_mobile_Challenge.GitRepository&gt;"
+                  moduleName = "MVC-mobile-Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigoeduardosilva/Swift_Dev/MVC-mobile-Challenge/MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3 - ea08bbbd6c456ff9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_mobile_Challenge.PullRequestListViewController.linkpullrequest.modify : Swift.Optional&lt;MVC_mobile_Challenge.GitRepository&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MVC-mobile-Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigoeduardosilva/Swift_Dev/MVC-mobile-Challenge/MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3 - d13195bcf563205b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_mobile_Challenge.PullRequestListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MVC_mobile_Challenge.PullRequestListViewController"
+                  moduleName = "MVC-mobile-Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigoeduardosilva/Swift_Dev/MVC-mobile-Challenge/MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "EE1DE251-DD7F-4A8B-B928-C65C0F4E87E3 - a5f2e87db7ce179b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_mobile_Challenge.PullRequestListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MVC_mobile_Challenge.PullRequestListViewController&gt;"
+                  moduleName = "MVC-mobile-Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigoeduardosilva/Swift_Dev/MVC-mobile-Challenge/MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30C511BD-3576-4EFC-AC11-032F9535287A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC-mobile-Challenge/Scenes/Repositories/RepositoriesListTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "updateRepositoriesModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "311DF601-609C-4D07-B3BC-8C408690B5DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC-mobile-Challenge/Scenes/Repositories/RepositoriesListTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "updateRepositoriesModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4AF36A5-9765-4972-A1DA-440E32294988"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC-mobile-Challenge/Scenes/PullRequest/PullRequestListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
