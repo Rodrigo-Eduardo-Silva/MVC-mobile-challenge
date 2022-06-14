@@ -11,17 +11,19 @@ class PullRequestListModel {
     var currentPage: Int
     var totalpullrequest: Int
     var rechargeList: Bool
+    var gitRepository: GitRepository
     
-    init(service: PullRequestListService) {
+    init(gitRepository:GitRepository ,service: PullRequestListService) {
+        self.gitRepository = gitRepository
         self.service = service
         self.currentPage = 1
         totalpullrequest = 1
         rechargeList = false
     }
     
-    func loadPullRequest(owner: String ,repository: String){
+    func loadPullRequest(){
         rechargeList = true
-            service.loadPullRequest(page: currentPage, owner: owner, repository: repository) { pull in
+        service.loadPullRequest(page: currentPage, owner: gitRepository.owner.login, repository: gitRepository.name) { pull in
                 if let pull = pull {
                     self.pullrequest += pull
                     self.totalpullrequest = pull.count
@@ -33,7 +35,7 @@ class PullRequestListModel {
 
 class PullRequestListModelMock: PullRequestListModel {
     
-    override func loadPullRequest(owner: String ,repository: String) {
+    override func loadPullRequest() {
         self.pullrequest = [
             PullRequest.init(title: "teste", user: User.init(avatar_url: "", body: "something", html_url: "")),
             PullRequest.init(title: "teste", user: User.init(avatar_url: "", body: "something", html_url: "")),

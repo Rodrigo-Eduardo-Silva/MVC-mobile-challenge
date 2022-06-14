@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DgS-XX-6GX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="GwP-2p-Az0">
-            <objects>
-                <navigationController id="DgS-XX-6GX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tfl-VO-kKv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xHf-Ma-ZFQ" kind="relationship" relationship="rootViewController" id="OuK-Yj-aoP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Li1-Yr-TXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="43" y="115"/>
-        </scene>
         <!--Repositories List Table View Controller-->
         <scene sceneID="QOL-DY-Dmc">
             <objects>
@@ -34,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XZr-SF-SDd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" focusStyle="custom" rowHeight="159" id="cFa-Za-xYU" customClass="RepositoriesListTableViewCell" customModule="MVC_mobile_Challenge" customModuleProvider="target">
@@ -244,7 +227,6 @@
                                             <outlet property="avatarPullimage" destination="xFX-t7-Naf" id="gQt-1h-xgm"/>
                                             <outlet property="bodyLabel" destination="zVq-Xf-zfR" id="98k-pU-mY7"/>
                                             <outlet property="titleLabel" destination="h9k-9c-s2E" id="h0Y-YE-jnq"/>
-                                            <segue destination="w68-eN-ZhY" kind="show" id="qMB-pW-USr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -268,53 +250,8 @@
             </objects>
             <point key="canvasLocation" x="1805.7971014492755" y="114.50892857142857"/>
         </scene>
-        <!--Pull Request List View Controller Web-->
-        <scene sceneID="6hf-0i-F8I">
-            <objects>
-                <viewController storyboardIdentifier="PullRequestListViewControllerWeb" id="w68-eN-ZhY" customClass="PullRequestListViewControllerWeb" customModule="MVC_mobile_Challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="169-zj-tia">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRR-QH-K8v">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9zA-AR-Kzd">
-                                <rect key="frame" x="197" y="482" width="20" height="20"/>
-                                <color key="color" name="AccentColor"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Z8u-Cc-vPh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eRR-QH-K8v" firstAttribute="trailing" secondItem="Z8u-Cc-vPh" secondAttribute="trailing" id="8HZ-wO-JIf"/>
-                            <constraint firstItem="9zA-AR-Kzd" firstAttribute="centerX" secondItem="eRR-QH-K8v" secondAttribute="centerX" id="R94-m3-Eru"/>
-                            <constraint firstItem="9zA-AR-Kzd" firstAttribute="centerY" secondItem="eRR-QH-K8v" secondAttribute="centerY" id="aBU-zD-69S"/>
-                            <constraint firstItem="eRR-QH-K8v" firstAttribute="top" secondItem="Z8u-Cc-vPh" secondAttribute="top" id="bva-iR-0zI"/>
-                            <constraint firstAttribute="bottom" secondItem="eRR-QH-K8v" secondAttribute="bottom" id="wPc-Q0-goH"/>
-                            <constraint firstItem="eRR-QH-K8v" firstAttribute="leading" secondItem="Z8u-Cc-vPh" secondAttribute="leading" id="wdE-46-lmi"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="EG2-s8-8rg"/>
-                    <connections>
-                        <outlet property="PullRequestWebView" destination="eRR-QH-K8v" id="WaX-ym-7gh"/>
-                        <outlet property="loadingActiveIndicator" destination="9zA-AR-Kzd" id="3I9-v6-kKm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jm6-ZX-OUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2708.6956521739135" y="114.50892857142857"/>
-        </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

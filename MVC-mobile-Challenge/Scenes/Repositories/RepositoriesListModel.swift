@@ -6,7 +6,7 @@ protocol RepositoriesListModelDelegate: AnyObject {
 }
 
 class RepositoriesListModel {
-    var repositories: [GitRepository] = []
+    private(set) var repositories: [GitRepository] = []
     weak var delegate: RepositoriesListModelDelegate?
     let service: RepositoriesListService
     var currentPage: Int

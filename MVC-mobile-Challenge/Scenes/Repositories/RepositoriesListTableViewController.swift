@@ -4,7 +4,9 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     var model = RepositoriesListModel()
-    var repository: [GitRepository] = []
+    var repositories: [GitRepository] {
+        model.repositories
+    }
     var totalrepositories: GitHead!
     var label: UILabel = {
         let label = UILabel()
@@ -22,22 +24,10 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
         model.loadRepositories()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vc = segue.destination as! PullRequestListViewController
-//        let pull = repository[tableView.indexPathForSelectedRow!.row]
-//        vc.pullmodel = PullRequestListModelMock(service: PullRequestListService())
-//        vc.linkpullrequest = pull
-//    }
-    
-    func showPullrequest() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewcontroller = storyboard.instantiateViewController(withIdentifier: "PullRequestListViewController") as? PullRequestListViewController else {
-            fatalError()
-        }
-        let pull = repository[tableView.indexPathForSelectedRow!.row]
-        viewcontroller.pullmodel = PullRequestListModel(service: PullRequestListService())
-        viewcontroller.linkpullrequest = pull
-        navigationController?.pushViewController(viewcontroller, animated: true)
+    func showPullrequest(repository: GitRepository) {
+        let repository = repositories[tableView.indexPathForSelectedRow!.row]
+        let viewController = PullRequestListViewController.create(repository: repository)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     // MARK: - Table view data source
 
@@ -47,15 +37,15 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.backgroundView = repository.count == 0 ? label : nil
-        return repository.count
+        tableView.backgroundView = repositories.count == 0 ? label : nil
+        return repositories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard  let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RepositoriesListTableViewCell else{
             fatalError("Célula Não Encontrada")
         }
-        let cellRepository = repository[indexPath.row]
+        let cellRepository = repositories[indexPath.row]
         cell.prepareRepositoryCell(with: cellRepository)
         return cell
     }
@@ -70,23 +60,34 @@ class RepositoriesListTableViewController: UIViewController, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == repository.count - 20 && !model.rechargeList && repository.count != model.totalrepository {
+        if indexPath.row == repositories.count - 2 && !model.rechargeList && repositories.count != model.totalrepository {
             model.currentPage += 1
             model.loadRepositories()
-            print("Total de Repositórios: \(model.totalrepository) , Já Inclusos : \(repository.count)")
+            print("Total de Repositórios: \(model.totalrepository) , Já Inclusos : \(repositories.count)")
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showPullrequest()
+        let repository = repositories[indexPath.row]
+        showPullrequest(repository: repository)
     }
 }
 
 extension RepositoriesListTableViewController: RepositoriesListModelDelegate {
     func updateRepositoriesModel() {
-        repository += model.repositories
+        
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
             self?.model.rechargeList = false
          }
+    }
+}
+
+extension RepositoriesListTableViewController {
+    static func create() -> RepositoriesListTableViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewcontroller = storyboard.instantiateViewController(withIdentifier: "RepositoriesListTableViewController") as? RepositoriesListTableViewController else {
+            fatalError()
+        }
+        return viewcontroller
     }
 }

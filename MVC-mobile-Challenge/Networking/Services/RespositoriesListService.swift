@@ -6,7 +6,7 @@ class RepositoriesListService {
     private let basePath = "https://api.github.com/search/repositories?"
     private let privateToken = "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"
     private let teste = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1"
-    private let per_page = 50
+    private let per_page = 10
 
     private let session: URLSession
 
