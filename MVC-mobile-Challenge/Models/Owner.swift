@@ -1,13 +1,13 @@
 import Foundation
 
-struct Owner: Codable{
+struct Owner: Codable {
     let login: String
     let id: Int
     let avatar_url: String
     let repos_url: String
 }
 
-extension Owner{
+extension Owner {
     static func fixture(
         login: String = "Rodries",
         id: Int = 778,

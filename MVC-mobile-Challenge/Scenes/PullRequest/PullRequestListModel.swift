@@ -12,15 +12,13 @@ class PullRequestListModel {
     var totalpullrequest: Int
     var rechargeList: Bool
     var gitRepository: GitRepository
-    
-    init(gitRepository:GitRepository ,service: PullRequestListService) {
+    init(gitRepository: GitRepository, service: PullRequestListService) {
         self.gitRepository = gitRepository
         self.service = service
         self.currentPage = 1
         totalpullrequest = 1
         rechargeList = false
     }
-    
     func loadPullRequest(){
         rechargeList = true
         service.loadPullRequest(page: currentPage, owner: gitRepository.owner.login, repository: gitRepository.name) { pull in
@@ -29,12 +27,11 @@ class PullRequestListModel {
                     self.totalpullrequest = pull.count
                 }
                 self.delegate?.updatePullRequest()
-            }
+        }
     }
 }
 
 class PullRequestListModelMock: PullRequestListModel {
-    
     override func loadPullRequest() {
         self.pullrequest = [
             PullRequest.init(title: "teste", user: User.init(avatar_url: "", body: "something", html_url: "")),

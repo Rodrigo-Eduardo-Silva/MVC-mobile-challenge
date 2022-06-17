@@ -2,15 +2,13 @@ import UIKit
 import Kingfisher
 
 class RepositoriesListTableViewCell: UITableViewCell {
-   
     @IBOutlet weak var repositoryNameLabel: UILabel!
     @IBOutlet weak var descriptionRepositoryLabel: UILabel!
     @IBOutlet weak var forksLabel: UILabel!
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

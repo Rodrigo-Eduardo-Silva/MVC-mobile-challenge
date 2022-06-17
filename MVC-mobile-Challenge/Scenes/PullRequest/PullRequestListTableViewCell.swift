@@ -1,30 +1,26 @@
 import UIKit
 import Kingfisher
 class PullRequestListTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var avatarPullimage: UIImageView!
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    
-    func preparePullrequest(with pullrequest: PullRequest){
+    func preparePullrequest(with pullrequest: PullRequest) {
         titleLabel.text = pullrequest.title
-        if let bodyPullrequest = pullrequest.user.body{
+        if let bodyPullrequest = pullrequest.user.body {
             bodyLabel.text = bodyPullrequest
-        }else{
+        } else {
             bodyLabel.text = " Just a PullRequest Body"
         }
-        if let url = URL(string: pullrequest.user.avatar_url){
+        if let url = URL(string: pullrequest.user.avatar_url) {
             avatarPullimage.kf.setImage(with: url, placeholder: nil, options: nil, completionHandler: nil)
         }
     }

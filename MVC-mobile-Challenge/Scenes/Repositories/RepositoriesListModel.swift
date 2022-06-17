@@ -19,8 +19,7 @@ class RepositoriesListModel {
         totalrepository = 1
         rechargeList = false
     }
-
-    func loadRepositories(){
+    func loadRepositories() {
         rechargeList = true
         RepositoriesListService().loadRepositories(page: currentPage) { [weak self] repository in
             if let repository = repository {
