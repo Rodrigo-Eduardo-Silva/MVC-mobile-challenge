@@ -1,0 +1,23 @@
+
+identifier_name:
+ min_lenght:
+    error: 4
+ excluded:
+    - per_page
+    - avatar_url
+    - repos_url
+    - full_name
+    - stargazers_count
+    - html_url
+    - total_count
+    - id
+line_length: 200
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded:
+    - MVC_mobile_ChallengeUITestsLaunchTests
+    - MVC_mobile_ChallengeTests
+    - MVC_mobile_ChallengeUITests

@@ -20,7 +20,7 @@ class PullRequestListViewController: UIViewController, UITableViewDataSource, UI
         pullmodel?.loadPullRequest()
       //  navigationItem.title = "Repository " + pullmodel?.gitRepository.name ?? "Just"
     }
-    // MARK: -  Table view data source
+    // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
